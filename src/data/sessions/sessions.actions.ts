@@ -5,6 +5,7 @@ import { ConfState } from './conf.state';
 export const loadConfData = () => async (dispatch: React.Dispatch<any>) => {
   dispatch(setLoading(true));
   const data = await getConfData();
+  setTimeout(()=> {}, 5000)
   dispatch(setData(data));
   dispatch(setLoading(false));
 }
